@@ -8,11 +8,12 @@
     background-color: white;
 }
 html {
-    margin-top: 2rem;
+    margin: 2rem 0;
     font-size: 62.5%;
 }
 body {
     background: #e0e0e0;
+    overflow-x: hidden;
 }
 .h1 {
     text-align: center;
@@ -73,7 +74,7 @@ body {
     justify-content: center;
 }
 .inp {
-    width: calc(56rem - 21rem); 
+    width: min(45em, 96%); 
     height: 3rem;
     margin-bottom: 1.4rem;
     font-size: 1.8rem;
@@ -151,6 +152,9 @@ label {
     .container {
         margin-top: 5rem;
     }
+    .login_left, .register_right {
+        min-width: 34vw;
+    }
 }
 @media (max-width: 680px) {
     html {
@@ -168,11 +172,34 @@ label {
     .container {
         flex-wrap: wrap;
         margin-top: 7rem;
-        padding: 5rem 25rem;
-        min-width: 90vw;
+        flex-direction: column;
+        min-width: 50vw;   
+    }
+    .h1 {
+        width: 45rem;
+    }
+    .login_left, .register_right {
+        min-width: 70vw;
     }
 } 
+@media (max-width: 290px) {
+    html {
+        font-size: 35%;
+    }
+    .container {
+        flex-wrap: wrap;
+        margin-top: 7rem;
+        flex-direction: column;
+        min-width: 50vw;   
+    }
+    .h1 {
+        width: 40rem;
+    }
+    .login_left, .register_right {
+        min-width: 60vw;
+    }
 
+} 
 
 /*____FOOTER_____*/
 footer {
