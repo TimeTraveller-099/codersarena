@@ -2,6 +2,14 @@ html {
     scroll-behavior: smooth;
     font-size: 62.5%;
 }
+:root {
+    --gradient_1: linear-gradient(
+        45deg, 
+        rgba(255,240,7,1) 0%, 
+        rgb(0, 230, 214) 66%, 
+        rgba(29,155,255,1) 100%
+    );
+}
 ::selection {
     color: #7c7c7c;
     background-color: white;
@@ -13,11 +21,9 @@ html {
     transition: 0.4s;
 }
 .main {
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(149,149,149,1) 40%, 
-    rgba(119,119,119,1) 59%, rgba(55,55,55,1) 100%);
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-size: cover;
+    background: linear-gradient(0deg, rgb(209, 209, 209) 0%, rgb(116, 116, 116) 40%, 
+    rgb(104, 104, 104) 59%, rgba(55,55,55,1) 100%);
+    max-height: 200vh;
 }
 
 /*_____HEADER_____*/
@@ -38,37 +44,15 @@ html {
 .header ul {
     display: flex;
 }
-.li_active {
+.header ul li {
     list-style-type: none;
+    margin: 0 1rem;
 }
-.li_active:hover{
+.header ul li:hover {
     transform: scale(1.1, 1.1);
     transform: translate(0rem, -.5rem);
 }
-.a_active {
-    background: white;
-    color: #7c7c7c; 
-    text-decoration: none;
-    transition: 0.3s;
-    padding: .8rem 1.2rem;
-    font-family: montserrat;
-    font-weight: 300;
-    font-size: 1.8rem;
-    border: 1px solid white;
-    border-radius: .4rem;
-}
-.a_active:hover {
-    box-shadow: .2rem .2rem 1rem .3rem rgba(255, 255, 255, 0.911);
-}
-.header ul .li {
-    list-style-type: none;
-    margin: 0 0 0 3rem;
-}
-.header ul .li:hover {
-    transform: scale(1.1, 1.1);
-    transform: translate(0rem, -.5rem);
-}
-.header ul li .a {
+.header ul li a {
     text-decoration: none;
     transition: 0.3s;
     color: white;
@@ -79,11 +63,33 @@ html {
     border: 1px solid white;
     border-radius: .4rem;
 }
-.header ul .li .a:hover {
+.header ul li a:hover {
     background: white;
     color: #7c7c7c; 
     box-shadow: .2rem .2rem 1rem .3rem rgba(255, 255, 255, 0.911);
 }
+
+/*____BARS____*/
+i {
+    text-align: center;
+    margin: 1rem;
+    font-size: 4rem;
+    padding: 2rem 2.3rem;
+    transition: .2s;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    border-radius: .6rem;
+}
+i:hover {
+    background-color: white;
+    color: rgb(0, 119, 255);
+}
+.ii {
+    display: none;
+    align-self: flex-end;
+    justify-self: flex-start;
+}
+
 
 /*_____SECTION 1_____*/
 .section1 {
@@ -106,7 +112,8 @@ html {
     color: white;
 }
 .section1 p {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin: 0 3rem;
     font-family: monospace;
     text-align: center;
     color: rgb(255, 255, 255);
@@ -116,11 +123,47 @@ span {
 }
 
 
-/*_____SECTION 2_____*/
-
-
-
-
+/*_____SECTION 2_____*/   
+.section2 {
+    max-height: 300vh;
+}
+.section2 h2 {
+    text-align: center;
+    font-size: 5em;
+    font-family: sans-serif;
+    color: rgb(102, 102, 102);
+    background: #e0e0e0;
+    padding: 1.6rem 0;
+    margin: 0 auto;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    width: 60%;
+    border-radius: 2rem;
+}
+.about {
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+}
+.about .box p {
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.box {
+    width: 40%;
+    margin-bottom: 4rem;
+    background: #e0e0e0;
+    border-radius: 4rem;
+    padding: 2.5rem 4.5rem;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 2rem 2rem 5rem rgb(173, 173, 173), -2rem -2rem 5rem white;
+}
 
 /*_____SECTION 3_____*/
 .lan {
@@ -148,25 +191,35 @@ span {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    border: 1px solid black;
 }
 .card {
     width: 30%;
     background: #e0e0e0;
-    border: 1px solid black;
     margin-bottom: 5rem;
     border-radius: 4rem;
+    box-shadow: 2rem 2rem 5rem rgb(173, 173, 173), -2rem -2rem 5rem white;
 }
 .card_title {
     text-align: center;
-    background: linear-gradient(270deg, rgba(207,207,207,1) 0%, rgba(180,180,180,1) 8%, 
-    rgba(162,162,162,1) 24%, rgba(143,143,143,1) 42%, rgba(107,107,107,1) 100%);
+    background: var(--gradient_1);
+    background-size: 300%;
     padding: 5rem 1rem;
     color: #fff;
+    background-position: right;
     font-size: 3.7rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 4rem;
+    animation: lol 5s infinte alternate;
 }
+@keyframes lol {
+    0% {
+        background-position: right;
+    }
+    100% {
+        background-position: left;
+    }
+}
+
 .content {
     padding: 2rem 2rem;
     text-align: center;
@@ -176,9 +229,11 @@ span {
 .content .btn {
     display: block;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(270deg, rgba(186,186,186,1) 0%, rgba(142,142,142,1) 100%);
+    background: var(--gradient_1);
+    background-size: 500%;
+    background-position: right;
     width: 50%;
-    border: 2px solid rgb(99, 99, 99);
+    border: 2px solid rgb(0, 140, 255);
     border-radius: .5rem;
     text-decoration: none;
     color: #fff;
@@ -187,11 +242,16 @@ span {
     margin-top: 1.3rem;
     padding: .8rem 1rem;
 }
-
+.btn:hover {
+    color: rgb(77, 77, 77);
+    background: #fff;
+    border-color: rgba(142,142,142,1);
+}
 
 /*_____SECTION 4_____*/
 .section4 {
-    min-height: 100vh;
+    max-height: 200vh;
+    padding: 10rem 0; 
     margin-top: 10rem;
 }
 .section4 h2 {
@@ -223,8 +283,9 @@ span {
 
 /*_____SECTION 5_____*/
 .section5 {
-    min-height: 100vh;
-    margin-top: 9rem;
+    max-height: 200vh;
+    padding: 10rem 0; 
+    margin-top: 5rem;
     margin-bottom: 4rem;
 }
 .section5 h2 {
@@ -276,18 +337,41 @@ footer h1 {
 
 /*_____RESPONSIVE_____*/
 @media (min-width: 1100px) {
-    .card {
-        max-width: 30rem;
-        max-height: 44rem;
+    .box {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        min-height: 30rem;
     }
-    .
+    .card {
+        max-width: 40rem;
+    }
 }
 @media (min-width: 1080px) {
+    .box {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        min-height: 26rem;
+    }
+    .box p {
+        font-size: 2.3rem;
+    }
     .card {
         flex-basis: 30%;
     }
 }
 @media (max-width: 1080px) {
+    .why_coding p, .what_is_coding p {
+        font-size: 2.6rem;
+    }
+    .box {
+        min-width: 90%;
+        padding: 4rem 4rem;
+    }
+    .box p {
+        font-size: 2.3rem;
+    }
     html {
         font-size: 55%;
     }
@@ -296,53 +380,123 @@ footer h1 {
     }
 }
 @media (max-width: 968px) {
+    .box {
+        min-width: 95%;
+        padding: 4rem 4rem;
+    }
+    .box p {
+        font-size: 3rem;
+    }
     html {
         font-size: 50%;
     }
+    .content {
+        font-size: 2.3rem;
+    }
+    .grid_container {
+        width: 95%;
+    }
 }
 @media (max-width: 860px){
-    html {
-        font-size: 43%;
+    .about {
+        max-width: 100%;
+        padding: 0 5rem;
+    }
+    .box {
+        flex-basis: 60%;
+        min-width: 90%;
+        min-height: 23rem;
     }
     .grid_container {
         width: 100%;
     }
     .what_is_coding {
         max-width: 80%;
+        margin-bottom: 0;
     }
     .why_coding {
         max-width: 80%;
     }
 }
-@media (max-width: 700px) {
+@media (max-width: 740px) {
+    .about {
+        max-width: 100%;
+        padding: 0 7rem;
+    }
+    .box {
+        min-width: 100%;
+    }
+    .header {
+        flex-direction: column;
+    }
+    .ii {
+        display: block;
+    }
+    .header h1 {
+        font-size: 6rem;
+        margin-bottom: 5rem;
+    }
+    nav {
+        background: white;
+        padding: 1rem;
+        min-width: 100%;
+        border-radius: 2rem;
+        margin-bottom: 4rem;
+    }
+    .header nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+    ul li {
+        text-align: center;
+        padding: 1.5rem 1rem;
+        margin: 0 1rem;
+        transition: .3s;
+    }
+    .header ul li a  {
+        border: none;
+        color: rgb(50, 132, 255);
+        padding: 1rem 2rem;
+        font-size: 3rem;
+    }
+    .header ul li a:hover {
+        background: rgb(100, 100, 100);
+        color: #fff;
+        box-shadow: none;
+    }
+    .header ul li:hover {
+        transform: none;
+    }
+    .section1 h2 {
+        font-size: 6rem;
+    }
     .grid_container {
         justify-content: space-evenly;
     }
     .card {
         flex-basis: 40%;
     }
-    .header {
-        flex-direction: column;  
-        justify-content: center;
-        align-items: center;  
+    .what_is_coding, .why_coding {
+        max-width: 90%;
     }
-    .header ul {
+    footer {
         margin-top: 3rem;
-        justify-content: space-evenly;
-    }
-    .header ul li {
-        margin: 0 0 0 3rem;
-    }
-    .what_is_coding {
-        max-width: 80%;
-    }
-    .why_coding {
-        max-width: 80%;
     }
 }
-
-
-@media (max-width: 470px) {
+@media (max-width: 575px) {
+    .about {
+        max-width: 100%;
+        padding: 0 5rem;
+    }
+    .lan {
+        padding: 1.8rem 3rem;
+    }
+    html {
+        font-size: 48%;
+    }
+    .h1 {
+        font-size: 4rem;
+    }
     .card {
         flex-basis: 60%;
         min-width: 80%;
@@ -350,11 +504,61 @@ footer h1 {
     .grid_container {
         width: 100%;
     }
-    html {
-        font-size: 37%;
+    .section5 {
+        margin-top: 0rem;
+        margin-bottom: 1rem;
+    }
+    footer {
+        margin-top: 1rem;
     }
 }
-
+@media (max-width: 550px) {
+    .header h1 {
+        font-size: 5rem;
+    }
+    html {
+        font-size: 46%;
+    }
+    .about {
+        max-width: 100%;
+        padding: 0 3rem;
+    }
+    .main { 
+        min-height: 100vh;
+    }
+    .section1 h2 {
+        margin-bottom: 2.6rem;
+    }
+    .section1 {
+        margin-top: 3rem;
+        padding: 4rem 1rem;
+    }
+    .section4 p {
+        font-size: 3rem;
+    }
+    .section5 p {
+        font-size: 3rem;
+    }
+} 
+@media (max-width: 400px) {
+    .header h1 {
+        font-size: 4.3rem;
+    }
+    .section2 {
+        width: 100%;
+    }
+    .about {
+        max-width: 100%;
+        padding: 0 2rem;
+    }
+    .lan {
+        font-size: 4.5rem;
+        padding: 1.8rem 3rem;
+    }
+    html {
+        font-size: 40%;
+    }
+}
 
 
 /*________DONE FINALLY________*/
