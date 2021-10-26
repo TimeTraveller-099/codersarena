@@ -12,21 +12,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" href="Images/codelogo.png" type="image/icon" size=1200*1200>
+    <script src="https://kit.fontawesome.com/a23a74dc7b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="main">
         <div class="header">
            <h1>Coders Arena</h1>
-            <nav>
+            <nav id="nav">
                 <ul>
-                    <li class="li_active"><a href="Login.html" target="_Blank" class="a_active">Login</a></li>
-                    <li class="li"><a href="#about_us" class="a">About Us</a></li>
-                    <li class="li"><a href="#lan" class="a">Coding Languages</a></li>
-                    <li class="li"><a href="#" class="a">Contact Us</a></li>
+                    <li><a href="Login.html" target="_Blank">Login</a></li>
+                    <li><a href="#about_us">About Us</a></li>
+                    <li><a href="#lan">Coding Languages</a></li>
+                    <li><a href="#">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
-    
         <!--SECTION 1-->
         <div class="section1">
             <img class="code_img" src="Images/programming.png" alt="img">
@@ -40,16 +40,14 @@
         <h2 id="about_us">About Us</h2>
         <div class="about">
             <!--LEFT BOXES-->
-            <div class="left upleft">
-                <div class="dash_left"></div>
+            <div class="box left">
                 <p>
                     We are a team of like-minded, passionate and innovative individuals with 10+ 
                     years of experience in the field of software. We are on a mission to help you
                     deliver the world’s best possible user experience.
                 </p>
             </div>
-            <div class="left downleft">
-                <div class="dash_right"></div>
+            <div class="box left">
                 <p>
                     We are on a mission to help you deliver the world’s best possible user experience.
                     We are a team of like-minded, passionate and innovative individuals with 10+ years 
@@ -59,16 +57,14 @@
 
             <!--RIGHT BOXES-->
             
-            <div class="right upright">
-                <div class="dash_left"></div>
+            <div class="box right">
                 <p>
                     We are a team of like-minded, passionate and innovative individuals with 10+ 
                     years of experience in the field of software. We are on a mission to help you
                     deliver the world’s best possible user experience.
                 </p>
             </div>
-            <div class="right downright">
-                <div class="dash_left"></div>
+            <div class="box right">
                 <p>
                     We are on a mission to help you deliver the world’s best possible user experience.
                     We are a team of like-minded, passionate and innovative individuals with 10+ years 
@@ -91,7 +87,7 @@
             <div class="content">
                 <p>Python is an advanced programming language that is interpreted, 
                 object-oriented and built on flexible and robust semantics.</p>
-                <a href="#" class="btn">More</a>
+                <a href="https://docs.python.org/3/" class="btn" target="_python">More</a>
             </div>
         </div>
 
@@ -103,7 +99,7 @@
             <div class="content">
                 <p>An Object-oriented, high-level programming language with several 
                 features that make it ideal for web-based development.</p>
-                <a href="#" class="btn">More</a>
+                <a href="https://docs.oracle.com/en/java/" class="btn" target="_java">More</a>
             </div>
         </div>
             
@@ -115,7 +111,7 @@
             <div class="content">  
                 <p>Sequence Query Language(SQL) is a Database Query language that allows for adding, accessing and 
                 managing content in a database.</p>
-                <a href="#" class="btn">More</a>
+                <a href="https://docs.microsoft.com/en-us/sql/?view=sql-server-ver15" class="btn" target="_sql">More</a>
             </div>
         </div>
 
@@ -127,7 +123,7 @@
             <div class="content">
                 <p>JavaScript is a client-side programming language that runs inside 
                 a client browser and processes commands on a computer rather than a server.</p>
-                <a href="#" class="btn">More</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="btn" target="_js">More</a>
             </div>
         </div>
 
@@ -139,7 +135,7 @@
             <div class="content">
                 <p>HTML is the standard markup language used to create web pages. 
                 It is used to create ele ctronic documents displayed online.</p>
-                <a href="#" class="btn">More</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" class="btn" target="_html">More</a>
             </div>
         </div>
 
@@ -151,7 +147,7 @@
             <div class="content">
                 <p>Cascading Style Sheets or CSS, is used to Style the web layout. 
                 It is very widely used for web designing purpose. Also used to make Sites responsive.</p>
-                <a href="#" class="btn">More</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" class="btn" target="_css">More</a>
             </div>
         </div>
 
@@ -196,6 +192,8 @@
     <footer>
         <h1>Website Made By - Raman</h1>
     </footer>
-    
+
+
+    <script src="js/script.js"></script>
 </body>
 </html>
