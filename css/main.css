@@ -5,13 +5,21 @@ html {
 :root {
     --gradient_1: linear-gradient(
         45deg, 
-        rgba(255,240,7,1) 0%, 
-        rgb(0, 230, 214) 66%, 
-        rgba(29,155,255,1) 100%
+        rgb(255, 255, 255) 0%, 
+        rgb(94, 167, 235) 66%, 
+        rgb(51, 139, 255) 66%,
+        rgb(80, 156, 255) 100%,
+        rgb(35, 130, 255) 100%
+    );
+    --gradient_2: linear-gradient(
+        45deg, 
+        rgb(255, 255, 255) 0%, 
+        rgb(74, 153, 255) 66%,
+        rgb(31, 127, 252) 100%
     );
 }
 ::selection {
-    color: #7c7c7c;
+    color: #2ba0ff;
     background-color: white;
 }
 * {
@@ -21,8 +29,7 @@ html {
     transition: 0.4s;
 }
 .main {
-    background: linear-gradient(0deg, rgb(209, 209, 209) 0%, rgb(116, 116, 116) 40%, 
-    rgb(104, 104, 104) 59%, rgba(55,55,55,1) 100%);
+    background: linear-gradient(0deg, rgb(90, 181, 255) 0%, rgba(0,129,255,1) 100%);
     max-height: 200vh;
 }
 
@@ -40,6 +47,7 @@ html {
     color: #ffffff;
     padding: .5rem 0rem;
     cursor: pointer;
+    font-weight: 700;
 }
 .header ul {
     display: flex;
@@ -65,7 +73,7 @@ html {
 }
 .header ul li a:hover {
     background: white;
-    color: #7c7c7c; 
+    color: rgba(0,129,255,1); 
     box-shadow: .2rem .2rem 1rem .3rem rgba(255, 255, 255, 0.911);
 }
 
@@ -119,7 +127,7 @@ i:hover {
     color: rgb(255, 255, 255);
 }
 span {
-    color: #77be47;
+    color: #1eff00;
 }
 
 
@@ -131,15 +139,29 @@ span {
     text-align: center;
     font-size: 5em;
     font-family: sans-serif;
-    color: rgb(102, 102, 102);
-    background: #e0e0e0;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    background: var(--gradient_2);
+    background-size: 400%;
     padding: 1.6rem 0;
     margin: 0 auto;
     margin-top: 10rem;
     margin-bottom: 5rem;
     width: 60%;
     border-radius: 2rem;
+    border: .24rem inset rgb(0, 153, 255);
+    animation: s2 3s linear infinite alternate;
 }
+@keyframes s2 {
+    0% {
+        background-position: right;
+    }
+    100% {
+        background-position: left;
+        color: rgb(31, 127, 252);
+    }
+}
+
 .about {
     display: flex;
     max-width: 80%;
@@ -156,13 +178,31 @@ span {
 .box {
     width: 40%;
     margin-bottom: 4rem;
-    background: #e0e0e0;
+    background: #eeeeee;
     border-radius: 4rem;
     padding: 2.5rem 4.5rem;
     display: flex;
     justify-items: center;
     align-items: center;
     box-shadow: 2rem 2rem 5rem rgb(173, 173, 173), -2rem -2rem 5rem white;
+    animation: box 4s linear infinite;
+}
+@keyframes box {
+    0% {
+        box-shadow: 2rem 2rem 5rem rgb(206, 206, 206), -2rem -2rem 5rem white;
+    }
+    25% {
+        box-shadow: -2rem 2rem 5rem rgb(206, 206, 206), 2rem -2rem 5rem white;
+    }
+    50% {
+        box-shadow: -2rem -2rem 5rem rgb(206, 206, 206), 2rem 2rem 5rem white;
+    }
+    75% {
+        box-shadow: 2rem -2rem 5rem rgb(206, 206, 206), -2rem 2rem 5rem white;
+    }
+    100% {
+        box-shadow: 2rem 2rem 5rem rgb(206, 206, 206), -2rem -2rem 5rem white;
+    }
 }
 
 /*_____SECTION 3_____*/
@@ -170,8 +210,10 @@ span {
     text-align: center;
     font-size: 5em;
     font-family: sans-serif;
-    color: rgb(102, 102, 102);
-    background: #e0e0e0;
+    color: rgb(255, 255, 255);
+    background: var(--gradient_1);
+    background-size: 400%;
+    background-position: right;
     padding: 1.6rem 0rem;
     margin: 0 auto;
     margin-top: 10rem;
@@ -194,10 +236,15 @@ span {
 }
 .card {
     width: 30%;
-    background: #e0e0e0;
+    background: #eeeeee;
     margin-bottom: 5rem;
     border-radius: 4rem;
-    box-shadow: 2rem 2rem 5rem rgb(173, 173, 173), -2rem -2rem 5rem white;
+    cursor: pointer;
+    transition: .4s;
+}
+.card:hover {
+    box-shadow: 2rem 2rem 5rem rgb(173, 173, 173), -1rem -1rem 3rem white;
+    transform: scale(1.02, 1.02);
 }
 .card_title {
     text-align: center;
@@ -230,8 +277,9 @@ span {
     display: block;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: var(--gradient_1);
-    background-size: 500%;
+    background-size: 700%;
     background-position: right;
+    transition: background-position .7s;
     width: 50%;
     border: 2px solid rgb(0, 140, 255);
     border-radius: .5rem;
@@ -243,9 +291,9 @@ span {
     padding: .8rem 1rem;
 }
 .btn:hover {
-    color: rgb(77, 77, 77);
-    background: #fff;
-    border-color: rgba(142,142,142,1);
+    background-position: left;
+    color: rgb(0, 140, 255);
+    border-color: rgb(0, 140, 255);
 }
 
 /*_____SECTION 4_____*/
@@ -257,8 +305,10 @@ span {
 .section4 h2 {
     font-family: sans-serif;
     font-size: 5rem;
-    background: #e0e0e0;
-    color: rgb(94, 94, 94);
+    background: var(--gradient_1);
+    background-size: 400%;
+    background-position: right;
+    color: rgb(255, 255, 255);
     text-align: center;
     width: 50%;
     margin: 0 auto;
@@ -270,7 +320,7 @@ span {
     max-width: 60%;
     margin: 0 auto;
     padding: 5rem 4rem;
-    background: #e0e0e0;
+    background: #eeeeee;
     border-radius: 2rem;
     box-shadow:  2rem 2rem 6rem #bebebe, -2rem -2rem 6rem #ffffff;
 }
@@ -291,8 +341,10 @@ span {
 .section5 h2 {
     font-family: sans-serif;
     font-size: 5rem;
-    background: #e0e0e0;
-    color: rgb(94, 94, 94);
+    background: var(--gradient_1);
+    color: rgb(255, 255, 255);
+    background-size: 400%;
+    background-position: right;
     text-align: center;
     width: 50%;
     margin: 0 auto;
@@ -304,7 +356,7 @@ span {
     max-width: 60%;
     margin: 0 auto;
     padding: 5rem 4rem;
-    background: #e0e0e0;
+    background: #eeeeee;
     border-radius: 2rem;
     box-shadow:  2rem 2rem 6rem #bebebe, -2rem -2rem 6rem #ffffff;
 }
