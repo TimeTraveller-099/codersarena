@@ -325,7 +325,7 @@ span {
 .what_is_coding {
     max-width: 60%;
     margin: 0 auto;
-    padding: 5rem 4rem;
+    padding: 5.3rem 4.3rem;
     background: #eeeeee;
     border-radius: 2rem;
     box-shadow:  2rem 2rem 6rem #bebebe, -2rem -2rem 6rem #ffffff;
@@ -361,7 +361,7 @@ span {
 .why_coding {
     max-width: 60%;
     margin: 0 auto;
-    padding: 5rem 4rem;
+    padding: 5.3rem 4.6rem;
     background: #eeeeee;
     border-radius: 2rem;
     box-shadow:  2rem 2rem 6rem #bebebe, -2rem -2rem 6rem #ffffff;
@@ -435,6 +435,9 @@ footer h1 {
     }
 }
 @media (max-width: 968px) {
+    .about .box p {
+	font-size: 2.4em;
+    }
     .box {
         min-width: 95%;
         padding: 4rem 4rem;
@@ -450,6 +453,9 @@ footer h1 {
     }
 }
 @media (max-width: 860px){
+    .about .box p {
+	font-size: 2.4em;
+    }
     .about {
         max-width: 100%;
         padding: 0 5rem;
@@ -471,6 +477,9 @@ footer h1 {
     }
 }
 @media (max-width: 740px) {
+    .about .box p {
+	font-size: 2.6em;
+    }
     .about {
         max-width: 100%;
         padding: 0 7rem;
@@ -536,6 +545,9 @@ footer h1 {
     }
 }
 @media (max-width: 575px) {
+    .about .box p {
+	font-size: 2.6em;
+    }
     .about {
         max-width: 100%;
         padding: 0 5rem;
@@ -565,6 +577,9 @@ footer h1 {
     }
 }
 @media (max-width: 550px) {
+    .about .box p {
+	font-size: 2.6em;
+    }
     .header h1 {
         font-size: 5rem;
     }
@@ -593,6 +608,9 @@ footer h1 {
     }
 } 
 @media (max-width: 400px) {
+    .about .box p {
+	font-size: 2.7em;
+    }
     .header h1 {
         font-size: 4.3rem;
     }
