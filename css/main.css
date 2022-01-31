@@ -262,6 +262,15 @@ span {
     font-size: 3.7rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 4rem;
+    animation: lol 5s infinte alternate;
+}
+@keyframes lol {
+    0% {
+        background-position: right;
+    }
+    100% {
+        background-position: left;
+    }
 }
 
 .content {
